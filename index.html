@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="player">
+        <div class="cover">
+            <img src="./img/vung an toan.jpg" alt="Cover">
+        </div>
+        <h2>Vùng An Toàn</h2>
+        <p>Bray ft V#</p>
+        <div class="time">
+            <span id="currentTime">00:00</span>
+            <span id="duration">00:00</span>
+        </div>
+        <input type="range" class="progress" id="progress" value="0">
+        <div class="controls">
+            <button id="shuffle"><i class="ri-shuffle-line"></i></button>
+            <button id="prev"><i class="ri-skip-back-line"></i></button>
+            <button id="play"><i class="ri-play-circle-fill" style="font-size: 40px;"></i></button>
+            <button id="next"><i class="ri-skip-forward-line"></i></button>
+            <button id="repeat"><i class="ri-repeat-line"></i></button>
+        </div>
+        <div class="volume">
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+        <div class="wave">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="playlist">
+            <div class="playlist">
+                <div class="track">
+                    <img src="">
+                    <div class="track-info">
+                        <h4>One Step At A Time</h4>
+                        <p>MCK</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Serial Lover</h4>
+                        <p>Dick</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Youth</h4>
+                        <p>Obito</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Someone You Loved</h4>
+                        <p>Gill</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>As It Was</h4>
+                        <p>Harry</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Shivers</h4>
+                        <p>Thun</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Easy On Me</h4>
+                        <p>Adele</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Stay</h4>
+                        <p>The Kid</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Peaches</h4>
+                        <p>Justin</p>
+                    </div>
+                </div>
+                <div class="track">
+                    <img src="./img/vung an toan.jpg">
+                    <div class="track-info">
+                        <h4>Blinding Lights</h4>
+                        <p>Weeknd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <audio id="audio" src="./audio/vung a toan.mp3"></audio>
+    <script src="main.js"></script>
+</body>
+
+</html>

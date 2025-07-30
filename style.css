@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #dbeafe, #f0f4ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px;
+}
+
+/* Hộp phát nhạc chính */
+.player {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Ảnh bìa */
+.cover {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 10px 0 5px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Thời gian*/
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* Thanh tiến trình */
+.progress {
+    -webkit-appearance: none;
+    /* chỉ chấm tròn trên webkit */
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px 0;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* chỉ chấm tròn trên webkit */
+    height: 14px;
+    width: 14px;
+    background: #1d4ed8;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4.5px;
+}
+
+/* Nút điều khiển */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #1e40af;
+    cursor: pointer;
+}
+
+/* Thanh điều chỉnh âm lượng */
+.volume {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.volume input {
+    width: 100%;
+}
+
+/* Sóng nhạc */
+.wave {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 4px;
+    height: 20px;
+    margin: 10px 0;
+}
+
+.wave div {
+    width: 5px;
+    height: 100%;
+    background: #3b82f6;
+    animation: wave 1s infinite ease-in-out;
+}
+
+.wave div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.wave div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.3);
+    }
+}
+
+/* list */
+.playlist {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Bài hát trong list */
+.track {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 10px;
+}
+
+.track:hover {
+    background: #f0f4ff;
+}
+
+.track img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.track-info {
+    text-align: left;
+}
+
+.track-info h4 {
+    font-size: 14px;
+}
+
+.track-info p {
+    color: #777;
+    font-size: 12px;
+}
